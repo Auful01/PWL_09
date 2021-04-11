@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Kelas;
+// use App\Models\Mahasiswa;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 class Mahasiswa extends Model
@@ -27,4 +29,8 @@ class Mahasiswa extends Model
         'jurusan',
         'no_hp',
     ];
+
+    public function kelas(){
+        return $this->belongsTo(Kelas::class);
+    }
 }
