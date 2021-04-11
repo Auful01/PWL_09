@@ -3,19 +3,17 @@
 @section('content')
 <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
-        <div class="card" style="width: 24rem;">
-            <div class="card-header"> Detail Mahasiswa </div>
-                <div class="card-body">
+            <h3>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG </h3>
+                <h3>KARTU HASIL STUDI (KHS)</h3>
+                </div>
+                <br><br><br>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <b>Nim: </b>{{$nilai->nim}}
-                        </li>
-                        <li class="list-group-item">
-                            <b>Nama: </b>{{$nilai->nama}}
-                        </li>
-                        <li class="list-group-item">
-                            <b>Kelas: </b>{{$nilai->kelas->nama_kelas}}
-                        </li>
+
+                        <table>
+                            <tr><strong>NAMA:</strong>{{$nilai->nama}}</tr>
+                            <tr><strong>NIM:</strong>{{$nilai->nim}}</tr>
+                            <tr><strong>KELAS:</strong>{{$nilai->kelas->nama_kelas}}</tr>
+                        </table>
                         <table class="table table-bordered">
                         <tr>
                             <th>Mata Kuliah</th>
@@ -33,10 +31,7 @@
                         @endforeach
                         </table>
                     </ul>
-                </div>
 
                 <a class="btn btn-success mt-3" href="{{ route('mahasiswa.index') }}">Kembali</a>
-            </div>
-        </div>
     </div>
     @endsection
