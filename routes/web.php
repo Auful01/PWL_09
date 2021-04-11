@@ -2,7 +2,9 @@
 
 
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\PostsController;
+use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -21,3 +23,4 @@ use Illuminate\Http\Request;
 
 Route::resource('mahasiswa', MahasiswaController::class);
 Route::get('search',[PostsController::class,'search']);
+Route::get('mahasiswa/nilai/{nim}', [MahasiswaController::class,'nilai'])->name('mahasiswa.nilai');
