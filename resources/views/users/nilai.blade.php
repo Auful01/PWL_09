@@ -34,6 +34,7 @@
                         </table>
                     </ul>
                 </div>
+
                 <a class="btn btn-success mt-3" href="{{ route('mahasiswa.index') }}">Kembali</a>
             </div>
         </div>
