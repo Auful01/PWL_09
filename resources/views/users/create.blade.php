@@ -36,14 +36,19 @@
                     </div>
                     <div class="form-group">
                         <label for="kelas">Kelas</label>
-                        <input type="kelas" name="kelas" class="form-control" id="kelas" aria-describedby="password" >
+                        {{-- <input type="kelas" name="kelas" class="form-control" id="kelas" aria-describedby="password" > --}}
+                        <select class="form-control" id="kelas" name="kelas" type="kelas">
+                        @foreach ($kelas as $kls)
+                            <option value="{{$kls->id}}" >{{$kls->nama_kelas}}</option>
+                        @endforeach
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="jurusan">Jurusan</label>
                         <input type="jurusan" name="jurusan" class="form-control" id="jurusan" aria-describedby="jurusan" >
                     </div>
                     <div class="form-group">
-                        <label for="no_hp">No_Handphone</label>
+                        <label for="no_hp">No Handphone</label>
                         <input type="no_hp" name="no_hp" class="form-control" id="no_hp" aria-describedby="no_hp" >
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
